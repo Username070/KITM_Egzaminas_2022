@@ -19,7 +19,27 @@ const setTransaction = asyncHandler(async (req, res) => {
     res.status(201).json(transaction);
 });
 
+const updateTransaction = asyncHandler( async (req, res) => {
+
+    const updateTransaction = await Transaction.findByIdAndUpdate(req.headers.id, req.headers, {
+        new: true,
+    })
+
+    res.status(200).json(updateTransaction);
+});
+
+const deleteTransaction = asyncHandler( async (req, res) => {
+
+    const transaction = await Transaction.findById(req.headers.id);
+
+    await transaction.remove();
+
+    res.status(200).json({id: req.headers.id});
+})
+
 module.exports = {
     setTransaction,
     getTransactions,
+    updateTransaction,
+    deleteTransaction
 }

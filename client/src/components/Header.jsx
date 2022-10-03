@@ -24,11 +24,11 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse justify-content-end pe-3" id="navbarText">
                         <ul className="navbar-nav mr-auto">
+                            {user ? (
+                                <>
                             <li className="nav-item active">
                                 <Link className="nav-link" to="/">Pagrindinis</Link>
                             </li>
-                            {user ? (
-                                <>
                                     <li className="btn-group nav-item">
                                         <a type="button" className="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
                                             {user.name}

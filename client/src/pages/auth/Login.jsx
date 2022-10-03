@@ -70,14 +70,14 @@ const Login = () => {
                         <div className="row">
                             <div className="col-xs-12 mb-3">
                                 <label htmlFor="email" className="form-label">El. Pastas</label>
-                                <input type="email" className="form-control" id="email" placeholder="Email" name="email"
+                                <input type="email" className="form-control" id="email" placeholder="El. Pastas" name="email"
                                     value={email} onChange={onChange} required />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-xs-12 mb-3">
                                 <label htmlFor="password" className="form-label">Slaptazodis</label>
-                                <input type="password" className="form-control" id="password" placeholder="Password" name="password"
+                                <input type="password" className="form-control" id="password" placeholder="Slaptazodis" name="password"
                                     value={password} onChange={onChange} required />
                             </div>
                         </div>

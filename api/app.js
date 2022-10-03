@@ -28,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/transactions', require('./routes/transactionRoutes'));
 app.use('/users', usersRouter);
 app.use(errorHandler)
 
